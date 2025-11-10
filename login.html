@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - OsamaCorp</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-950 text-gray-100">
+  <!-- Header / Navbar -->
+  <header class="bg-black/90 backdrop-blur shadow-md sticky top-0 z-40">
+    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-8">
+        <a href="index.html#hero" class="text-2xl font-bold text-white">OsamaCorp</a>
+        <nav class="hidden md:block">
+          <ul class="flex items-center space-x-6 text-gray-300">
+            <li><a href="index.html#produk" class="hover:text-white">Produk</a></li>
+            <li><a href="index.html#tentang" class="hover:text-white">Tentang</a></li>
+            <li><a href="index.html#kontak" class="hover:text-white">Kontak</a></li>
+            <li><a href="index.html#alamat" class="hover:text-white">Alamat</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="flex items-center space-x-4">
+        <a href="cart.html" class="relative" aria-label="Buka Keranjang">
+          <i class="fas fa-shopping-cart text-gray-200 text-2xl"></i>
+          <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">0</span>
+        </a>
+      </div>
+    </div>
+    <div class="md:hidden border-t border-gray-800">
+      <nav class="container mx-auto px-4 py-2">
+        <ul class="flex justify-between text-sm text-gray-300">
+          <li><a href="index.html#produk" class="py-2 px-2 hover:text-white">Produk</a></li>
+          <li><a href="index.html#tentang" class="py-2 px-2 hover:text-white">Tentang</a></li>
+          <li><a href="index.html#kontak" class="py-2 px-2 hover:text-white">Kontak</a></li>
+          <li><a href="index.html#alamat" class="py-2 px-2 hover:text-white">Alamat</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mx-auto px-4 py-10 md:py-14 flex-grow">
+    <div class="bg-gray-900 border border-gray-800 p-8 rounded-lg shadow-md max-w-md mx-auto">
+      <h1 class="text-2xl font-bold text-white mb-6 text-center">Login ke Admin Panel</h1>
+
+      <!-- Form Login -->
+      <form id="login-form" class="space-y-4">
+        <div>
+          <label for="username" class="block text-sm font-medium text-gray-300">Username</label>
+          <input type="text" id="username" name="username" required
+            class="mt-1 block w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-orange-500 focus:border-orange-500 text-white">
+        </div>
+
+        <div>
+          <label for="password" class="block text-sm font-medium text-gray-300">Password</label>
+          <input type="password" id="password" name="password" required
+            class="mt-1 block w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-orange-500 focus:border-orange-500 text-white">
+        </div>
+
+        <div id="form-feedback" class="text-sm"></div>
+
+        <button type="submit" id="submit-btn"
+          class="w-full bg-orange-500 text-white py-2 px-4 rounded-md font-semibold hover:bg-orange-600 transition-colors flex items-center justify-center">
+          <span id="submit-text">Login</span>
+          <i id="submit-spinner" class="fas fa-spinner fa-spin hidden ml-2"></i>
+        </button>
+      </form>
+      <p class="text-center text-gray-400 text-sm mt-4">
+        <i class="fas fa-info-circle"></i> Gunakan <strong>admin</strong> dan <strong>password</strong> untuk login.
+      </p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-black text-gray-300 mt-16">
+    <div class="container mx-auto px-4 py-10 grid md:grid-cols-3 gap-8">
+      <div>
+        <p class="text-xl font-bold text-white">OsamaCorp</p>
+        <p class="mt-3 text-sm text-gray-400">Belanja mudah dan aman. Terima kasih telah mempercayai kami.</p>
+      </div>
+      <div>
+        <p class="font-semibold text-white">Navigasi</p>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a href="index.html#produk" class="hover:text-white">Produk</a></li>
+          <li><a href="index.html#tentang" class="hover:text-white">Tentang</a></li>
+          <li><a href="index.html#kontak" class="hover:text-white">Kontak</a></li>
+          <li><a href="index.html#alamat" class="hover:text-white">Alamat</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold text-white">Ikuti Kami</p>
+        <div class="mt-3 flex items-center space-x-4 text-xl">
+          <a class="hover:text-white" href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a class="hover:text-white" href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a class="hover:text-white" href="#" aria-label="Tiktok"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-gray-800">
+      <div class="container mx-auto px-4 py-4 text-sm text-gray-400 flex flex-col sm:flex-row items-center justify-between">
+        <span>© <span id="year"></span> OsamaCorp. All rights reserved.</span>
+        <span>Dibuat dengan ❤ menggunakan Tailwind CSS</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      const y = document.getElementById('year');
+      if (y) y.textContent = new Date().getFullYear();
+    });
+  </script>
+  <script src="script.js" defer></script>
+  <script src="login.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk - OsamaCorp</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-950 text-gray-100">
+    <!-- Header / Navbar -->
+    <header class="bg-black/90 backdrop-blur shadow-md sticky top-0 z-40">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center space-x-8">
+                <a href="index.html" class="text-2xl font-bold text-white">OsamaCorp</a>
+                <nav class="hidden md:block">
+                    <ul class="flex items-center space-x-6 text-gray-300">
+                        <li><a href="produk.html" class="hover:text-white">Produk</a></li>
+                        <li><a href="index.html#tentang" class="hover:text-white">Tentang</a></li>
+                        <li><a href="index.html#kontak" class="hover:text-white">Kontak</a></li>
+                        <li><a href="index.html#alamat" class="hover:text-white">Alamat</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="login.html" class="text-gray-300 hover:text-white" aria-label="Login">
+                    <i class="fas fa-user text-2xl"></i>
+                </a>
+                <a href="cart.html" class="relative" aria-label="Buka Keranjang">
+                    <i class="fas fa-shopping-cart text-gray-200 text-2xl"></i>
+                    <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                </a>
+            </div>
+        </div>
+        <!-- Mobile nav -->
+        <div class="md:hidden border-t border-gray-800">
+            <nav class="container mx-auto px-4 py-2">
+                <ul class="flex justify-between text-sm text-gray-300">
+                    <li><a href="produk.html" class="py-2 px-2 hover:text-white">Produk</a></li>
+                    <li><a href="index.html#tentang" class="py-2 px-2 hover:text-white">Tentang</a></li>
+                    <li><a href="index.html#kontak" class="py-2 px-2 hover:text-white">Kontak</a></li>
+                    <li><a href="index.html#alamat" class="py-2 px-2 hover:text-white">Alamat</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-10 md:py-14">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between mb-6 gap-4">
+            <div>
+                <h3 class="text-2xl md:text-3xl font-bold">Semua Produk</h3>
+                <span class="text-sm text-gray-500">Harga sudah dikonversi ke Rupiah</span>
+            </div>
+            <!-- Search Bar -->
+            <div class="relative w-full md:w-auto">
+                <input type="text" id="search-input" placeholder="Cari produk..." 
+                    class="w-full md:w-64 pl-10 pr-4 py-2 bg-gray-800 border border-gray-700 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-orange-500 focus:border-orange-500">
+                <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+            </div>
+        </div>
+
+        <!-- Loader -->
+        <div id="loader" class="text-center py-10">
+            <i class="fas fa-spinner fa-spin text-4xl text-white"></i>
+            <p class="mt-2 text-gray-400">Memuat produk...</p>
+        </div>
+        <!-- Product Grid -->
+        <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"></div>
+        <!-- Error / No Results Message -->
+        <div id="error-message" class="hidden text-center bg-red-100 text-red-700 p-4 rounded-lg mt-6">
+            <p>Gagal memuat produk. Silakan coba lagi nanti.</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-gray-300 mt-16">
+        <div class="container mx-auto px-4 py-10 grid md:grid-cols-3 gap-8">
+            <div>
+                <p class="text-xl font-bold text-white">OsamaCorp</p>
+                <p class="mt-3 text-sm text-gray-400">Belanja mudah dan aman. Terima kasih telah mempercayai kami.</p>
+            </div>
+            <div>
+                <p class="font-semibold text-white">Navigasi</p>
+                <ul class="mt-3 space-y-2 text-sm">
+                    <li><a href="produk.html" class="hover:text-white">Produk</a></li>
+                    <li><a href="index.html#tentang" class="hover:text-white">Tentang</a></li>
+                    <li><a href="index.html#kontak" class="hover:text-white">Kontak</a></li>
+                    <li><a href="index.html#alamat" class="hover:text-white">Alamat</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="font-semibold text-white">Ikuti Kami</p>
+                <div class="mt-3 flex items-center space-x-4 text-xl">
+                    <a class="hover:text-white" href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a class="hover:text-white" href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a class="hover:text-white" href="#" aria-label="Tiktok"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-800">
+            <div class="container mx-auto px-4 py-4 text-sm text-gray-400 flex flex-col sm:flex-row items-center justify-between">
+                <span>© <span id="year"></span> OsamaCorp. All rights reserved.</span>
+                <span>Dibuat dengan ❤ menggunakan Tailwind CSS</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Detail Modal -->
+    <div id="productModal" class="fixed inset-0 bg-black/70 flex items-center justify-center p-4 z-50 hidden">
+        <div class="bg-gray-900 text-gray-100 rounded-lg shadow-xl w-full max-w-2xl max-h-[90vh] overflow-y-auto border border-gray-800">
+            <div class="p-4 sm:p-6">
+                <div class="flex justify-between items-center pb-3 border-b border-gray-800">
+                    <h3 class="text-xl font-semibold text-white" id="modal-title">Detail Produk</h3>
+                    <button id="closeModalBtn" class="text-gray-400 hover:text-white">
+                        <i class="fas fa-times fa-lg"></i>
+                    </button>
+                </div>
+                <div class="mt-4 md:flex md:space-x-6">
+                    <div class="md:w-1/2 flex-shrink-0">
+                        <img id="modal-image" src="https://placehold.co/400x400" alt="Product Image" class="w-full h-auto object-contain rounded-lg max-h-80">
+                    </div>
+                    <div class="mt-4 md:mt-0 md:w-1/2">
+                        <span id="modal-category" class="text-sm bg-gray-800 text-gray-200 px-2 py-1 rounded-full">Kategori</span>
+                        <h4 class="text-2xl font-bold text-white my-2" id="modal-product-name">Nama Produk</h4>
+                        <p class="text-3xl font-light text-white mb-4" id="modal-price">Rp 0</p>
+                        <p class="text-gray-300 text-sm leading-relaxed" id="modal-description">Deskripsi produk akan muncul di sini.</p>
+                        <button id="modal-add-to-cart" class="mt-6 w-full bg-black text-white py-3 rounded-lg font-semibold border border-white/20 hover:bg-gray-800 transition-colors flex items-center justify-center space-x-2">
+                            <i class="fas fa-cart-plus"></i>
+                            <span>Tambah ke Keranjang</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="fixed bottom-5 right-5 z-50"></div>
+
+    <!-- Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            const y = document.getElementById('year');
+            if (y) y.textContent = new Date().getFullYear();
+        });
+    </script>
+    <script src="produk.js" defer></script>
+</body>
+</html>

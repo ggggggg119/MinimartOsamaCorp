@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Online Modern</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-950 text-gray-100">
+    <!-- Header / Navbar -->
+    <header class="bg-black/90 backdrop-blur shadow-md sticky top-0 z-40">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center space-x-8">
+                <a href="index.html" class="text-2xl font-bold text-white">OsamaCorp</a>
+                <nav class="hidden md:block">
+                    <ul class="flex items-center space-x-6 text-gray-300">
+                        <li><a href="produk.html" class="hover:text-white">Produk</a></li> <!-- FIX: Link to produk.html -->
+                        <li><a href="#tentang" class="hover:text-white">Tentang</a></li>
+                        <li><a href="#kontak" class="hover:text-white">Kontak</a></li>
+                        <li><a href="#alamat" class="hover:text-white">Alamat</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="login.html" class="text-gray-300 hover:text-white" aria-label="Login">
+                    <i class="fas fa-user text-2xl"></i>
+                </a>
+                <a href="cart.html" class="relative" aria-label="Buka Keranjang">
+                    <i class="fas fa-shopping-cart text-gray-200 text-2xl"></i>
+                    <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                </a>
+            </div>
+        </div>
+        <!-- Mobile nav -->
+        <div class="md:hidden border-t border-gray-800">
+            <nav class="container mx-auto px-4 py-2">
+                <ul class="flex justify-between text-sm text-gray-300">
+                    <li><a href="produk.html" class="py-2 px-2 hover:text-white">Produk</a></li> 
+                    <li><a href="#tentang" class="py-2 px-2 hover:text-white">Tentang</a></li>
+                    <li><a href="#kontak" class="py-2 px-2 hover:text-white">Kontak</a></li>
+                    <li><a href="#alamat" class="py-2 px-2 hover:text-white">Alamat</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="hero" class="bg-gradient-to-r from-black to-gray-900">
+        <div class="container mx-auto px-4 py-12 md:py-20 grid md:grid-cols-2 gap-8 items-center">
+            <div>
+                <h2 class="text-3xl md:text-5xl font-extrabold leading-tight text-white">Belanja Hemat, Produk Lengkap, Pengiriman Cepat.</h2>
+                <p class="mt-4 text-gray-300 md:text-lg">Temukan ribuan produk pilihan dengan harga terbaik setiap hari.</p>
+                <div class="mt-6">
+                    <a href="produk.html" class="inline-flex items-center bg-black text-white px-6 py-3 rounded-lg font-semibold border border-white/20 hover:bg-gray-800 transition"> <!-- FIX: Link to produk.html -->
+                        Belanja Sekarang
+                        <i class="fa-solid fa-arrow-right ml-3"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hidden md:block">
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-white/10 blur-2xl rounded-full"></div>
+                    <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1200&auto=format&fit=crop" alt="Belanja" class="relative rounded-2xl shadow-xl border border-white/10">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- The "Produk Unggulan" section has been removed -->
+
+        <!-- Tentang Kami -->
+        <section id="tentang" class="bg-black border-t border-gray-800">
+            <div class="container mx-auto px-4 py-12 md:py-16">
+                <h3 class="text-2xl md:text-3xl font-bold mb-4">Tentang Kami</h3>
+                <p class="text-gray-300 md:text-lg max-w-3xl">Berawal pada tahun 1942 dari sebuah bengkel logam kecil di Eropa yang memproduksi komponen industri dan mesin berat yang bekerja di bawah pimpinan pemerintahan Nazi jerman, OsamaCorp tumbuh dari semangat ketahanan, inovasi, dan keinginan untuk membangun kembali dunia pasca-konflik. Setelah perang berakhir, para pendiri perusahaan memutuskan untuk mengalihkan fokus dari industri berat menuju pengembangan teknologi dan produk untuk kehidupan sehari-hari.
+
+Selama dekade-dekade berikutnya, OsamaCorp terus berevolusi — dari pabrikan logam sederhana menjadi perusahaan internasional yang berfokus pada riset, teknologi, dan ritel modern. Pada tahun 1970-an, perusahaan memperluas operasinya ke Asia, termasuk Indonesia, dan mendirikan pusat distribusi utama di Jakarta untuk mendukung pertumbuhan ekonomi regional.
+
+Kini, setelah lebih dari delapan puluh tahun beroperasi, OsamaCorp dikenal sebagai toko online yang menggabungkan tradisi ketelitian manufaktur klasik dengan efisiensi teknologi digital masa kini. Kami berkomitmen menyediakan produk berkualitas tinggi, pelayanan cepat, serta pengalaman belanja yang memuaskan bagi setiap pelanggan.
+
+Semangat kami tetap sama seperti di hari pertama: membangun masa depan melalui inovasi, integritas, dan dedikasi tanpa henti.</p>
+            </div>
+        </section>
+
+        <!-- Kontak Kami -->
+        <section id="kontak" class="bg-gradient-to-r from-gray-900 to-black">
+            <div class="container mx-auto px-4 py-12 md:py-16">
+                <h3 class="text-2xl md:text-3xl font-bold mb-6">Kontak Kami</h3>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-gray-900 rounded-xl border border-gray-800 shadow-sm p-5 flex items-start space-x-4">
+                        <div class="text-gray-100 text-2xl"><i class="fa-brands fa-whatsapp"></i></div>
+                        <div>
+                            <p class="font-semibold">WhatsApp</p>
+                            <a href="https://wa.me/6285895780908" target="_blank" class="text-gray-200 hover:text-white">085895780908</a>
+                        </div>
+                    </div>
+                    <div class="bg-gray-900 rounded-xl border border-gray-800 shadow-sm p-5 flex items-start space-x-4">
+                        <div class="text-gray-100 text-2xl"><i class="fa-solid fa-envelope"></i></div>
+                        <div>
+                            <p class="font-semibold">Email</p>
+                            <a href="mailto:halo@tokoku.id" class="text-gray-200 hover:text-white">osamacorp@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="bg-gray-900 rounded-xl border border-gray-800 shadow-sm p-5 flex items-start space-x-4">
+                        <div class="text-gray-100 text-2xl"><i class="fa-solid fa-clock"></i></div>
+                        <div>
+                            <p class="font-semibold">Jam Operasional</p>
+                            <p class="text-gray-400">Senin - Minggu, 08.00 - 21.00 WIB</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Alamat & Peta -->
+        <section id="alamat" class="bg-black">
+            <div class="container mx-auto px-4 py-12 md:py-16">
+                <h3 class="text-2xl md:text-3xl font-bold mb-4">Alamat</h3>
+                <p class="text-gray-300 mb-6">Jl. Contoh No. 123, Jakarta, Indonesia</p>
+                <div class="aspect-video w-full rounded-xl overflow-hidden border border-gray-800 shadow-sm">
+                    <iframe title="Peta Lokasi" class="w-full h-full" style="border:0" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Jl.%20Contoh%20No.%20123,%20Jakarta&output=embed"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-gray-300">
+        <div class="container mx-auto px-4 py-10 grid md:grid-cols-3 gap-8">
+            <div>
+                <p class="text-xl font-bold text-white">OsamaCorp</p>
+                <p class="mt-3 text-sm text-gray-400">Belanja mudah dan aman. Terima kasih telah mempercayai kami.</p>
+            </div>
+            <div>
+                <p class="font-semibold text-white">Navigasi</p>
+                <ul class="mt-3 space-y-2 text-sm">
+                    <li><a href="produk.html" class="hover:text-white">Produk</a></li> <!-- FIX: Link to produk.html -->
+                    <li><a href="#tentang" class="hover:text-white">Tentang</a></li>
+                    <li><a href="#kontak" class="hover:text-white">Kontak</a></li>
+                    <li><a href="#alamat" class="hover:text-white">Alamat</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="font-semibold text-white">Ikuti Kami</p>
+                <div class="mt-3 flex items-center space-x-4 text-xl">
+                    <a class="hover:text-white" href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a class="hover:text-white" href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a class="hover:text-white" href="#" aria-label="Tiktok"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-700">
+            <div class="container mx-auto px-4 py-4 text-sm text-gray-400 flex flex-col sm:flex-row items-center justify-between">
+                <span>© <span id="year"></span> OsamaCorp. All rights reserved.</span>
+                <span>Dibuat dengan ❤ menggunakan Tailwind CSS</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            const y = document.getElementById('year');
+            if (y) y.textContent = new Date().getFullYear();
+        });
+    </script>
+    <script src="script.js" defer></script>
+</body>
+</html>

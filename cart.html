@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keranjang - OsamaCorp</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-950 text-gray-100">
+  <!-- Header / Navbar -->
+  <header class="bg-black/90 backdrop-blur shadow-md sticky top-0 z-40">
+    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-8">
+        <a href="index.html#hero" class="text-2xl font-bold text-white">OsamaCorp</a>
+       
+        <nav class="hidden md:block">
+          <ul class="flex items-center space-x-6 text-gray-300">
+            <li><a href="produk.html" class="hover:text-white">Produk</a></li> <!-- FIX: Link to produk.html -->
+            <li><a href="index.html#tentang" class="hover:text-white">Tentang</a></li>
+            <li><a href="index.html#kontak" class="hover:text-white">Kontak</a></li>
+            <li><a href="index.html#alamat" class="hover:text-white">Alamat</a></li>
+          </ul>
+        </nav>
+
+      </div>
+      <div class="flex items-center space-x-4">
+        <a href="login.html" class="text-gray-300 hover:text-white" aria-label="Login">
+          <i class="fas fa-user text-2xl"></i>
+        </a>
+        <div class="relative" aria-label="Keranjang Aktif">
+          <i class="fas fa-shopping-cart text-gray-200 text-2xl"></i>
+          <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">0</span>
+        </div>
+      </div>
+    </div>
+    <div class="md:hidden border-t border-gray-800">
+      <nav class="container mx-auto px-4 py-2">
+        <ul class="flex justify-between text-sm text-gray-300">
+          <li><a href="index.html#produk" class="py-2 px-2 hover:text-white">Produk</a></li>
+          <li><a href="index.html#tentang" class="py-2 px-2 hover:text-white">Tentang</a></li>
+          <li><a href="index.html#kontak" class="py-2 px-2 hover:text-white">Kontak</a></li>
+          <li><a href="index.html#alamat" class="py-2 px-2 hover:text-white">Alamat</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-4 py-10 md:py-14">
+    <div class="flex items-end justify-between mb-6">
+      <h1 class="text-2xl md:text-3xl font-bold">Keranjang Belanja</h1>
+      <a href="index.html#produk" class="text-sm text-gray-300 hover:text-white">Lanjut Belanja</a>
+    </div>
+
+    <div class="grid lg:grid-cols-3 gap-6">
+      <!-- Items -->
+      <div class="lg:col-span-2 space-y-4" id="cart-items">
+        <!-- Diisi oleh script.js -->
+      </div>
+      <!-- Summary -->
+      <aside class="bg-gray-900 border border-gray-800 rounded-xl p-5 h-max">
+        <p class="text-lg font-semibold">Ringkasan Belanja</p>
+        <div class="mt-3 flex items-center justify-between">
+          <span class="text-gray-300">Total</span>
+          <span id="cart-total" class="text-xl font-bold text-white">Rp 0</span>
+        </div>
+        <button id="order-btn" class="mt-6 w-full bg-black text-white py-3 rounded-lg font-semibold border border-white/20 hover:bg-gray-800 transition disabled:opacity-50 disabled:cursor-not-allowed">
+          Order Sekarang
+        </button>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="bg-black text-gray-300">
+    <div class="container mx-auto px-4 py-10 grid md:grid-cols-3 gap-8">
+      <div>
+        <p class="text-xl font-bold text-white">OsamaCorp</p>
+        <p class="mt-3 text-sm text-gray-400">Belanja mudah dan aman. Terima kasih telah mempercayai kami.</p>
+      </div>
+      <div>
+        <p class="font-semibold text-white">Navigasi</p>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a href="index.html#produk" class="hover:text-white">Produk</a></li>
+          <li><a href="index.html#tentang" class="hover:text-white">Tentang</a></li>
+          <li><a href="index.html#kontak" class="hover:text-white">Kontak</a></li>
+          <li><a href="index.html#alamat" class="hover:text-white">Alamat</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold text-white">Ikuti Kami</p>
+        <div class="mt-3 flex items-center space-x-4 text-xl">
+          <a class="hover:text-white" href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a class="hover:text-white" href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a class="hover:text-white" href="#" aria-label="Tiktok"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-gray-800">
+      <div class="container mx-auto px-4 py-4 text-sm text-gray-400 flex flex-col sm:flex-row items-center justify-between">
+        <span>© <span id="year"></span> OsamaCorp. All rights reserved.</span>
+        <span>Dibuat dengan ❤ menggunakan Tailwind CSS</span>
+      </div>
+    </div>
+  </footer>
+
+  <div id="toast-container" class="fixed bottom-5 right-5 z-50"></div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      const y = document.getElementById('year');
+      if (y) y.textContent = new Date().getFullYear();
+    });
+  </script>
+  <script src="script.js" defer></script>
+</body>
+</html>
